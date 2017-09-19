@@ -1,7 +1,5 @@
 var menudata={children:[
 {text:"Index",url:"index.html"},
-{text:"Reference",url:"files.html"},
+{text:"API List",url:"modules.html"},
 {text:"Pages",url:"pages.html"},
-{text:"Classes",url:"annotated.html",children:[
-{text:"Class List",url:"annotated.html"},
-{text:"Class Index",url:"classes.html"}]}]}
+{text:"Reference",url:"files.html"}]}
