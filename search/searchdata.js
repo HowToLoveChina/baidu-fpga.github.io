@@ -6,7 +6,7 @@ var indexSectionsWithContent =
   3: "p",
   4: "df",
   5: "p",
-  6: "mp",
+  6: "p",
   7: "cdm",
   8: "dp"
 };

@@ -76,18 +76,18 @@ Functions</h2></td></tr>
 <tr class="memitem:gaf49f83d3a76ee36b30b42f022d0cd70d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__datatype.html#ga43a6c8a178e117ced2d5690274d08858">PolarisStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__compute.html#gaf49f83d3a76ee36b30b42f022d0cd70d">polaris_gemm</a> (<a class="el" href="struct_polaris_context.html">PolarisContext</a> *ctxt, <a class="el" href="group__datatype.html#ga9c7dff36f8ddd014648ea27766095824">PolarisTransType</a> trans_a, <a class="el" href="group__datatype.html#ga9c7dff36f8ddd014648ea27766095824">PolarisTransType</a> trans_b, int m, int n, int k, float alpha, const void *a, <a class="el" href="group__datatype.html#ga07d185c916380435006dbfa5140b58f0">PolarisDataType</a> type_a, int lda, const void *b, <a class="el" href="group__datatype.html#ga07d185c916380435006dbfa5140b58f0">PolarisDataType</a> type_b, int ldb, float beta, void *c, <a class="el" href="group__datatype.html#ga07d185c916380435006dbfa5140b58f0">PolarisDataType</a> type_c, int ldc, const void *bias, <a class="el" href="group__datatype.html#gabc94218c26be2f0866c73495d27c02c1">PolarisActivationType</a> activation)</td></tr>
 <tr class="memdesc:gaf49f83d3a76ee36b30b42f022d0cd70d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform matrix multiplication with bias and activation support.  <a href="#gaf49f83d3a76ee36b30b42f022d0cd70d">More...</a><br /></td></tr>
 <tr class="separator:gaf49f83d3a76ee36b30b42f022d0cd70d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8f507194a83ae4123156968281b66cd4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__datatype.html#ga43a6c8a178e117ced2d5690274d08858">PolarisStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__compute.html#ga8f507194a83ae4123156968281b66cd4">polaris_activation</a> (<a class="el" href="struct_polaris_context.html">PolarisContext</a> *ctxt, <a class="el" href="group__datatype.html#gabc94218c26be2f0866c73495d27c02c1">PolarisActivationType</a> type, size_t length, float alpha, const float *src, float beta, float *dest)</td></tr>
-<tr class="memdesc:ga8f507194a83ae4123156968281b66cd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate activation functions.  <a href="#ga8f507194a83ae4123156968281b66cd4">More...</a><br /></td></tr>
-<tr class="separator:ga8f507194a83ae4123156968281b66cd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7aab8d6a4b0e38c14e6533118f4638b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__datatype.html#ga43a6c8a178e117ced2d5690274d08858">PolarisStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__compute.html#ga7aab8d6a4b0e38c14e6533118f4638b9">polaris_deactivation</a> (<a class="el" href="struct_polaris_context.html">PolarisContext</a> *ctxt, <a class="el" href="group__datatype.html#gabc94218c26be2f0866c73495d27c02c1">PolarisActivationType</a> type, size_t length, float alpha, const float *src, const float *src_diff, const float *dest, float beta, float *dest_diff)</td></tr>
-<tr class="memdesc:ga7aab8d6a4b0e38c14e6533118f4638b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate derived activation functions.  <a href="#ga7aab8d6a4b0e38c14e6533118f4638b9">More...</a><br /></td></tr>
-<tr class="separator:ga7aab8d6a4b0e38c14e6533118f4638b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6deac46ed2aef1b80d2f3d96fc5eb8f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__datatype.html#ga43a6c8a178e117ced2d5690274d08858">PolarisStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__compute.html#ga6deac46ed2aef1b80d2f3d96fc5eb8f9">polaris_eltwise</a> (<a class="el" href="struct_polaris_context.html">PolarisContext</a> *ctxt, <a class="el" href="group__datatype.html#ga4fd4a3ebdd79faf075a96203051f3aaa">PolarisElementWiseType</a> type, size_t length, float alpha0, const float *a, float alpha1, const float *b, float beta, float *c)</td></tr>
-<tr class="memdesc:ga6deac46ed2aef1b80d2f3d96fc5eb8f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Element wise functions.  <a href="#ga6deac46ed2aef1b80d2f3d96fc5eb8f9">More...</a><br /></td></tr>
-<tr class="separator:ga6deac46ed2aef1b80d2f3d96fc5eb8f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad287fd8bf298cb14d0f165d938a35cb0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__datatype.html#ga43a6c8a178e117ced2d5690274d08858">PolarisStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__compute.html#gad287fd8bf298cb14d0f165d938a35cb0">polaris_transpose</a> (<a class="el" href="struct_polaris_context.html">PolarisContext</a> *ctxt, int m, int n, const void *src, void *dest)</td></tr>
-<tr class="memdesc:gad287fd8bf298cb14d0f165d938a35cb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform matrix transpose on FPGA.  <a href="#gad287fd8bf298cb14d0f165d938a35cb0">More...</a><br /></td></tr>
-<tr class="separator:gad287fd8bf298cb14d0f165d938a35cb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga03490c3277ab8d8ee11457730eae9a54"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__datatype.html#ga43a6c8a178e117ced2d5690274d08858">PolarisStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__compute.html#ga03490c3277ab8d8ee11457730eae9a54">polaris_activation_2d</a> (<a class="el" href="struct_polaris_context.html">PolarisContext</a> *ctxt, <a class="el" href="group__datatype.html#gabc94218c26be2f0866c73495d27c02c1">PolarisActivationType</a> type, int m, int n, float alpha, const void *x, <a class="el" href="group__datatype.html#ga07d185c916380435006dbfa5140b58f0">PolarisDataType</a> type_x, int stride_x, float beta, void *y, <a class="el" href="group__datatype.html#ga07d185c916380435006dbfa5140b58f0">PolarisDataType</a> type_y, int stride_y)</td></tr>
+<tr class="memdesc:ga03490c3277ab8d8ee11457730eae9a54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute activation functions.  <a href="#ga03490c3277ab8d8ee11457730eae9a54">More...</a><br /></td></tr>
+<tr class="separator:ga03490c3277ab8d8ee11457730eae9a54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad6866b76fb4c1ef7b6cd7638f730f8c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__datatype.html#ga43a6c8a178e117ced2d5690274d08858">PolarisStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__compute.html#gad6866b76fb4c1ef7b6cd7638f730f8c7">polaris_deactivation_2d</a> (<a class="el" href="struct_polaris_context.html">PolarisContext</a> *ctxt, <a class="el" href="group__datatype.html#gabc94218c26be2f0866c73495d27c02c1">PolarisActivationType</a> type, int m, int n, float alpha, const void *y, <a class="el" href="group__datatype.html#ga07d185c916380435006dbfa5140b58f0">PolarisDataType</a> type_y, int stride_y, const void *dy, <a class="el" href="group__datatype.html#ga07d185c916380435006dbfa5140b58f0">PolarisDataType</a> type_dy, int stride_dy, const void *x, <a class="el" href="group__datatype.html#ga07d185c916380435006dbfa5140b58f0">PolarisDataType</a> type_x, int stride_x, float beta, void *dx, <a class="el" href="group__datatype.html#ga07d185c916380435006dbfa5140b58f0">PolarisDataType</a> type_dx, int stride_dx)</td></tr>
+<tr class="memdesc:gad6866b76fb4c1ef7b6cd7638f730f8c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute derived activation functions.  <a href="#gad6866b76fb4c1ef7b6cd7638f730f8c7">More...</a><br /></td></tr>
+<tr class="separator:gad6866b76fb4c1ef7b6cd7638f730f8c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3f5064ec8bddc919230a8505ced42f54"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__datatype.html#ga43a6c8a178e117ced2d5690274d08858">PolarisStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__compute.html#ga3f5064ec8bddc919230a8505ced42f54">polaris_elementwise_2d</a> (<a class="el" href="struct_polaris_context.html">PolarisContext</a> *ctxt, <a class="el" href="group__datatype.html#ga4fd4a3ebdd79faf075a96203051f3aaa">PolarisElementWiseType</a> type, int m, int n, float alpha0, const void *x0, <a class="el" href="group__datatype.html#ga07d185c916380435006dbfa5140b58f0">PolarisDataType</a> type_x0, int stride_x0, float alpha1, const void *x1, <a class="el" href="group__datatype.html#ga07d185c916380435006dbfa5140b58f0">PolarisDataType</a> type_x1, int stride_x1, float beta, void *y, <a class="el" href="group__datatype.html#ga07d185c916380435006dbfa5140b58f0">PolarisDataType</a> type_y, int stride_y)</td></tr>
+<tr class="memdesc:ga3f5064ec8bddc919230a8505ced42f54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Element wise functions.  <a href="#ga3f5064ec8bddc919230a8505ced42f54">More...</a><br /></td></tr>
+<tr class="separator:ga3f5064ec8bddc919230a8505ced42f54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4ad60397f7345f2518cf52f87a599aa1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__datatype.html#ga43a6c8a178e117ced2d5690274d08858">PolarisStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__compute.html#ga4ad60397f7345f2518cf52f87a599aa1">polaris_transpose</a> (<a class="el" href="struct_polaris_context.html">PolarisContext</a> *ctxt, int m, int n, const void *x, <a class="el" href="group__datatype.html#ga07d185c916380435006dbfa5140b58f0">PolarisDataType</a> type_x, int stride_x, void *y, <a class="el" href="group__datatype.html#ga07d185c916380435006dbfa5140b58f0">PolarisDataType</a> type_y, int stride_y)</td></tr>
+<tr class="memdesc:ga4ad60397f7345f2518cf52f87a599aa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform matrix transpose on FPGA.  <a href="#ga4ad60397f7345f2518cf52f87a599aa1">More...</a><br /></td></tr>
+<tr class="separator:ga4ad60397f7345f2518cf52f87a599aa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Functions that involve computation. This group provides the core computation ability of Polaris library. </p>
@@ -227,7 +227,7 @@ Functions</h2></td></tr>
 <p><code>bias</code> is a vector with dimension <code>1 * n</code>, which will be added to each row of output matrix <code>c</code>.</p>
 <p><code>activation</code> indicates the activation function type to be performed after the bias procession.</p>
 <p>Caller could specify the data type of input matrix <code>a</code>, <code>b</code>, <code>c</code> with <code>type_a</code>, <code>type_b</code>, <code>type_c</code> , data type of <code>bias</code> is the same with <code>c</code>.</p>
-<dl class="section note"><dt>Note</dt><dd>this function best performed with <code>trans_a</code> equals to <a class="el" href="group__datatype.html#gga9c7dff36f8ddd014648ea27766095824a04672db5b9ff8e20b9d0a67ccbe0f5d6" title="Non-transpose operation. ">POLARIS_NO_TRANS</a> and <code>trans_b</code> equals to <a class="el" href="group__datatype.html#gga9c7dff36f8ddd014648ea27766095824a4efd43d6d952f51d8b484bd352beda26" title="Transpose operation. ">POLARIS_TRANS</a>.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>this function best performed with <code>trans_a</code> equals to <a class="el" href="group__datatype.html#gga9c7dff36f8ddd014648ea27766095824a04672db5b9ff8e20b9d0a67ccbe0f5d6" title="Non-transpose operation. ">POLARIS_NO_TRANS</a> and <code>trans_b</code> equals to <a class="el" href="group__datatype.html#gga9c7dff36f8ddd014648ea27766095824a4efd43d6d952f51d8b484bd352beda26" title="Transpose operation. ">POLARIS_TRANS</a>. (Currently supports calling with this mode only)</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd><code>lda</code>, <code>ldb</code> and <code>ldc</code> is currently not supported in this version of Polaris, this functionality will be released later in December.<br />
  For data type, only POLARIS_FP32 is available for now, support for other data type will be released later.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -258,14 +258,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga8f507194a83ae4123156968281b66cd4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga8f507194a83ae4123156968281b66cd4">&#9670;&nbsp;</a></span>polaris_activation()</h2>
+<a id="ga03490c3277ab8d8ee11457730eae9a54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga03490c3277ab8d8ee11457730eae9a54">&#9670;&nbsp;</a></span>polaris_activation_2d()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="group__datatype.html#ga43a6c8a178e117ced2d5690274d08858">PolarisStatus</a> polaris_activation </td>
+          <td class="memname"><a class="el" href="group__datatype.html#ga43a6c8a178e117ced2d5690274d08858">PolarisStatus</a> polaris_activation_2d </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_polaris_context.html">PolarisContext</a> *&#160;</td>
           <td class="paramname"><em>ctxt</em>, </td>
@@ -279,8 +279,14 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>length</em>, </td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -291,8 +297,20 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const float *&#160;</td>
-          <td class="paramname"><em>src</em>, </td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__datatype.html#ga07d185c916380435006dbfa5140b58f0">PolarisDataType</a>&#160;</td>
+          <td class="paramname"><em>type_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>stride_x</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -303,8 +321,20 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float *&#160;</td>
-          <td class="paramname"><em>dest</em>&#160;</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__datatype.html#ga07d185c916380435006dbfa5140b58f0">PolarisDataType</a>&#160;</td>
+          <td class="paramname"><em>type_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>stride_y</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -314,33 +344,40 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Calculate activation functions. </p>
-<p>This function calculate the following formula: </p><pre class="fragment">dest = alpha * ActivationType(src) + beta * dest
-</pre><p>where both <code>src</code> and <code>dest</code> have <code>length</code> elements. Activation type is indicated by <code>type</code>.</p>
+<p>Compute activation functions. </p>
+<p>This function calculate the following formula: </p><pre class="fragment">y = alpha * ActivationType(x) + beta * y
+</pre><p>where both <code>x</code> and <code>y</code> have <code>length</code> elements. Activation type is indicated by <code>type</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ctxt</td><td>pointer to <a class="el" href="struct_polaris_context.html" title="Context object. ">PolarisContext</a> object </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>activation type </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>number of elements in input </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>number of rows </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>number of cols </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">alpha</td><td>alpha value </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">src</td><td>input matrix </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>input matrix </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type_x</td><td>data type of <code>x</code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">stride_x</td><td>stride of <code>x</code> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">beta</td><td>beta value </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">dest</td><td>output matrix</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">y</td><td>output matrix </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type_y</td><td>data type of <code>y</code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">stride_y</td><td>stride of <code>y</code> </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>Not fully supported by FPGA hardware yet. <br />
+ Currently supports using with <code>m = 1</code>.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Execution status, <a class="el" href="group__datatype.html#gga43a6c8a178e117ced2d5690274d08858a36ac641c4e79a322b5735a1aa7d3c0a6" title="Everything goes fine. ">POLARIS_OK</a> on success. </dd></dl>
 
 </div>
 </div>
-<a id="ga7aab8d6a4b0e38c14e6533118f4638b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga7aab8d6a4b0e38c14e6533118f4638b9">&#9670;&nbsp;</a></span>polaris_deactivation()</h2>
+<a id="gad6866b76fb4c1ef7b6cd7638f730f8c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad6866b76fb4c1ef7b6cd7638f730f8c7">&#9670;&nbsp;</a></span>polaris_deactivation_2d()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="group__datatype.html#ga43a6c8a178e117ced2d5690274d08858">PolarisStatus</a> polaris_deactivation </td>
+          <td class="memname"><a class="el" href="group__datatype.html#ga43a6c8a178e117ced2d5690274d08858">PolarisStatus</a> polaris_deactivation_2d </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_polaris_context.html">PolarisContext</a> *&#160;</td>
           <td class="paramname"><em>ctxt</em>, </td>
@@ -354,8 +391,14 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>length</em>, </td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -366,20 +409,56 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const float *&#160;</td>
-          <td class="paramname"><em>src</em>, </td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const float *&#160;</td>
-          <td class="paramname"><em>src_diff</em>, </td>
+          <td class="paramtype"><a class="el" href="group__datatype.html#ga07d185c916380435006dbfa5140b58f0">PolarisDataType</a>&#160;</td>
+          <td class="paramname"><em>type_y</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const float *&#160;</td>
-          <td class="paramname"><em>dest</em>, </td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>stride_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>dy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__datatype.html#ga07d185c916380435006dbfa5140b58f0">PolarisDataType</a>&#160;</td>
+          <td class="paramname"><em>type_dy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>stride_dy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__datatype.html#ga07d185c916380435006dbfa5140b58f0">PolarisDataType</a>&#160;</td>
+          <td class="paramname"><em>type_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>stride_x</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -390,8 +469,20 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float *&#160;</td>
-          <td class="paramname"><em>dest_diff</em>&#160;</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>dx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__datatype.html#ga07d185c916380435006dbfa5140b58f0">PolarisDataType</a>&#160;</td>
+          <td class="paramname"><em>type_dx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>stride_dx</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -401,35 +492,45 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Calculate derived activation functions. </p>
-<p>This function calculate the following formula: </p><pre class="fragment">dest_diff = DerivedActivation(src, src_diff, dest)
-</pre><p>it is used in the backward phase, and calculate <code>dest_diff</code> according to <code>src</code>, <code>src_diff</code> and <code>dest</code>, where <code>dest</code> and <code>src</code> is actually the input and output data seperately of the forward phase of the same operation, while <code>src_diff</code> is the gradient of <code>src</code>.</p>
+<p>Compute derived activation functions. </p>
+<p>This function computes the following formula: </p><pre class="fragment">dx = DerivedActivation(y, dy, x)
+</pre><p>It is used in the backward phase, and computes <code>dx</code> according to <code>y</code>, <code>dy</code> and <code>x</code>, where <code>x</code> and <code>y</code> is actually the input and output data separately of the forward phase of the same operation, while <code>dy</code> is the gradient of <code>y</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ctxt</td><td>pointer to <a class="el" href="struct_polaris_context.html" title="Context object. ">PolarisContext</a> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>activation type </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>number of elements in input </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>number of rows </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>number of cols </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">alpha</td><td>alpha value </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">src</td><td>backward src data (output data of the forward phase) </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">src_diff</td><td>gradient of <code>src</code> </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">dest</td><td>backward destination data (input data of the forward phase) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>backward src data (output data of the forward phase) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type_y</td><td>data type of <code>y</code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">stride_y</td><td>stride of <code>y</code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dy</td><td>gradient of <code>y</code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type_dy</td><td>data type of <code>dy</code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">stride_dy</td><td>stride of <code>dy</code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>backward destination data (input data of the forward phase) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type_x</td><td>data type of <code>x</code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">stride_x</td><td>stride of <code>x</code> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">beta</td><td>beta value </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">dest_diff</td><td>gradient of <code>dest</code> </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">dx</td><td>gradient of <code>x</code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type_dx</td><td>data type of <code>dx</code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">stride_dx</td><td>stride of <code>dx</code> </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>Not supported by FPGA hardware yet.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Execution status, <a class="el" href="group__datatype.html#gga43a6c8a178e117ced2d5690274d08858a36ac641c4e79a322b5735a1aa7d3c0a6" title="Everything goes fine. ">POLARIS_OK</a> on success. </dd></dl>
 
 </div>
 </div>
-<a id="ga6deac46ed2aef1b80d2f3d96fc5eb8f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga6deac46ed2aef1b80d2f3d96fc5eb8f9">&#9670;&nbsp;</a></span>polaris_eltwise()</h2>
+<a id="ga3f5064ec8bddc919230a8505ced42f54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3f5064ec8bddc919230a8505ced42f54">&#9670;&nbsp;</a></span>polaris_elementwise_2d()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="group__datatype.html#ga43a6c8a178e117ced2d5690274d08858">PolarisStatus</a> polaris_eltwise </td>
+          <td class="memname"><a class="el" href="group__datatype.html#ga43a6c8a178e117ced2d5690274d08858">PolarisStatus</a> polaris_elementwise_2d </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_polaris_context.html">PolarisContext</a> *&#160;</td>
           <td class="paramname"><em>ctxt</em>, </td>
@@ -443,8 +544,14 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>length</em>, </td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -455,8 +562,20 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const float *&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>x0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__datatype.html#ga07d185c916380435006dbfa5140b58f0">PolarisDataType</a>&#160;</td>
+          <td class="paramname"><em>type_x0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>stride_x0</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -467,8 +586,20 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const float *&#160;</td>
-          <td class="paramname"><em>b</em>, </td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__datatype.html#ga07d185c916380435006dbfa5140b58f0">PolarisDataType</a>&#160;</td>
+          <td class="paramname"><em>type_x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>stride_x1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -479,8 +610,20 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float *&#160;</td>
-          <td class="paramname"><em>c</em>&#160;</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__datatype.html#ga07d185c916380435006dbfa5140b58f0">PolarisDataType</a>&#160;</td>
+          <td class="paramname"><em>type_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>stride_y</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -491,7 +634,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Element wise functions. </p>
-<p>Perform element-wise operations indicated by the following fomula: </p><pre class="fragment">c = ElementWiseOperation(alpha0 * a, alpha1 * b) + beta * c
+<p>Perform element-wise operations indicated by the following fomula: </p><pre class="fragment">y = ElementWiseOperation(alpha0 * x0, alpha1 * x1) + beta * y
 </pre><p>where <code>type</code> indicates the exact operation to be performed.</p>
 <ul>
 <li><a class="el" href="group__datatype.html#gga4fd4a3ebdd79faf075a96203051f3aaaa61333a44fad62851aa844778f12bc6ca" title="element-wise addition ">POLARIS_ADD</a> <code>:= v0 + v1</code></li>
@@ -499,27 +642,36 @@ Functions</h2></td></tr>
 <li><a class="el" href="group__datatype.html#gga4fd4a3ebdd79faf075a96203051f3aaaa009015282afbbf999fc66a1dd09ec6e2" title="element-wise minimal of two vectors ">POLARIS_MIN</a> <code>:= min(v0, v1)</code></li>
 <li><a class="el" href="group__datatype.html#gga4fd4a3ebdd79faf075a96203051f3aaaa980eeda115628e77a301eb07392d3d02" title="element-wise maximal of two vecotrs ">POLARIS_MAX</a> <code>:= max(v0, v1)</code></li>
 </ul>
-<p>where <code>v0</code> is <code>alpha0 * a</code> and <code>v1</code> is <code>alpha1 * b</code>.</p>
+<p>where <code>v0</code> is <code>alpha0 * x0</code> and <code>v1</code> is <code>alpha1 * x1</code>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ctxt</td><td>pointer to <a class="el" href="struct_polaris_context.html" title="Context object. ">PolarisContext</a> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>element wise operation type </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>number of elements in input </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>number of rows </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>number of cols </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">alpha0</td><td>scalar parameter </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>input matrix </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x0</td><td>input matrix </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type_x0</td><td>data type of <code>x0</code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">stride_x0</td><td>stride of <code>x0</code> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">alpha1</td><td>scalar parameter </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>input matrix </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x1</td><td>input matrix </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type_x1</td><td>data type of <code>x1</code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">stride_x1</td><td>stride of <code>x1</code> </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">beta</td><td>scalar parameter </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">c</td><td>output matrix</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">y</td><td>output matrix </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type_y</td><td>data type of <code>y</code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">stride_y</td><td>stride of <code>y</code> </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>Not fully supported by FPGA hardware yet. <br />
+ Currently supports using with <code>m = 1</code>.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Execution status, <a class="el" href="group__datatype.html#gga43a6c8a178e117ced2d5690274d08858a36ac641c4e79a322b5735a1aa7d3c0a6" title="Everything goes fine. ">POLARIS_OK</a> on success. </dd></dl>
 
 </div>
 </div>
-<a id="gad287fd8bf298cb14d0f165d938a35cb0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad287fd8bf298cb14d0f165d938a35cb0">&#9670;&nbsp;</a></span>polaris_transpose()</h2>
+<a id="ga4ad60397f7345f2518cf52f87a599aa1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4ad60397f7345f2518cf52f87a599aa1">&#9670;&nbsp;</a></span>polaris_transpose()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -546,13 +698,37 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const void *&#160;</td>
-          <td class="paramname"><em>src</em>, </td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__datatype.html#ga07d185c916380435006dbfa5140b58f0">PolarisDataType</a>&#160;</td>
+          <td class="paramname"><em>type_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>stride_x</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>dest</em>&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__datatype.html#ga07d185c916380435006dbfa5140b58f0">PolarisDataType</a>&#160;</td>
+          <td class="paramname"><em>type_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>stride_y</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -563,18 +739,23 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Perform matrix transpose on FPGA. </p>
-<p>Dimension of matrix <code>src</code> is <code>m * n</code>, and <code>dest</code> is <code>n * m</code>.</p>
-<dl class="section warning"><dt>Warning</dt><dd><code>dest</code> and <code>src</code> should <b>NOT</b> be the same.</dd></dl>
+<p>Dimension of matrix <code>x</code> is <code>m * n</code>, and <code>y</code> is <code>n * m</code>.</p>
+<dl class="section warning"><dt>Warning</dt><dd>address of <code>y</code> and <code>x</code> should <b>NOT</b> be the same.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ctxt</td><td>pointer to <a class="el" href="struct_polaris_context.html" title="Context object. ">PolarisContext</a> object </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>dimension m </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>dimension n </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">src</td><td>FPGA address of input matrix </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">dest</td><td>FPGA address of output matrix</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>FPGA address of input matrix </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type_x</td><td>data type of <code>x</code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">stride_x</td><td>stride of <code>x</code> </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">y</td><td>FPGA address of output matrix </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type_y</td><td>data type of <code>y</code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">stride_y</td><td>stride of <code>y</code> </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>Not supported by FPGA hardware yet.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Execution status, <a class="el" href="group__datatype.html#gga43a6c8a178e117ced2d5690274d08858a36ac641c4e79a322b5735a1aa7d3c0a6" title="Everything goes fine. ">POLARIS_OK</a> on success. </dd></dl>
 
 </div>

@@ -91,9 +91,9 @@ Functions</h2></td></tr>
 <tr class="memitem:gabca228e59e4c5fa783d83edc06c87806"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__datatype.html#ga43a6c8a178e117ced2d5690274d08858">PolarisStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__memory.html#gabca228e59e4c5fa783d83edc06c87806">polaris_memset</a> (<a class="el" href="struct_polaris_context.html">PolarisContext</a> *ctxt, void *ptr, size_t size)</td></tr>
 <tr class="memdesc:gabca228e59e4c5fa783d83edc06c87806"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill a range of FPGA memory with zero.  <a href="#gabca228e59e4c5fa783d83edc06c87806">More...</a><br /></td></tr>
 <tr class="separator:gabca228e59e4c5fa783d83edc06c87806"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga941f0557f38ebb2b0b583f32c85c4a52"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__datatype.html#ga43a6c8a178e117ced2d5690274d08858">PolarisStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__memory.html#ga941f0557f38ebb2b0b583f32c85c4a52">polaris_batch_memcpy</a> (<a class="el" href="struct_polaris_context.html">PolarisContext</a> *ctxt, int copy_count, size_t copy_length, void *dest, size_t dest_step, size_t dest_padding, const void *src, size_t src_step, size_t src_padding)</td></tr>
-<tr class="memdesc:ga941f0557f38ebb2b0b583f32c85c4a52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform multiple FPGA memcpy in a specific pattern.  <a href="#ga941f0557f38ebb2b0b583f32c85c4a52">More...</a><br /></td></tr>
-<tr class="separator:ga941f0557f38ebb2b0b583f32c85c4a52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf1c3eb01d42d360e7083a98b2aa4b02a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__datatype.html#ga43a6c8a178e117ced2d5690274d08858">PolarisStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__memory.html#gaf1c3eb01d42d360e7083a98b2aa4b02a">polaris_memcpy_2d</a> (<a class="el" href="struct_polaris_context.html">PolarisContext</a> *ctxt, <a class="el" href="group__datatype.html#ga62059f680b22f2efe4a5d8cca26a7738">PolarisMemcpyKind</a> kind, int m, int n, void *dest, int stride_dest, const void *src, int stride_src)</td></tr>
+<tr class="memdesc:gaf1c3eb01d42d360e7083a98b2aa4b02a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform batched memcpy in a 2-D pattern. Often used to copy sub-matrices.  <a href="#gaf1c3eb01d42d360e7083a98b2aa4b02a">More...</a><br /></td></tr>
+<tr class="separator:gaf1c3eb01d42d360e7083a98b2aa4b02a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Functions related to memory allocation, free and copy, including memcpy between CPU and FPGA and kinds of on-FPGA memcpy. </p>
@@ -317,7 +317,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ctxt</td><td>pointer to <a class="el" href="struct_polaris_context.html" title="Context object. ">PolarisContext</a> object </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">kind</td><td>type of transfer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">kind</td><td>direction of the transfer </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">dest</td><td>destination FPGA/CPU memory address </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">src</td><td>source CPU/FPGA memory address </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>number of bytes to be copied</td></tr>
@@ -367,7 +367,7 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ctxt</td><td>pointer to <a class="el" href="struct_polaris_context.html" title="Context object. ">PolarisContext</a> object </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">ptr</td><td>address of the FPGA memory to be set </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>size of the memory</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>size of the memory (in bytes)</td></tr>
   </table>
   </dd>
 </dl>
@@ -375,14 +375,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga941f0557f38ebb2b0b583f32c85c4a52"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga941f0557f38ebb2b0b583f32c85c4a52">&#9670;&nbsp;</a></span>polaris_batch_memcpy()</h2>
+<a id="gaf1c3eb01d42d360e7083a98b2aa4b02a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf1c3eb01d42d360e7083a98b2aa4b02a">&#9670;&nbsp;</a></span>polaris_memcpy_2d()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="group__datatype.html#ga43a6c8a178e117ced2d5690274d08858">PolarisStatus</a> polaris_batch_memcpy </td>
+          <td class="memname"><a class="el" href="group__datatype.html#ga43a6c8a178e117ced2d5690274d08858">PolarisStatus</a> polaris_memcpy_2d </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="struct_polaris_context.html">PolarisContext</a> *&#160;</td>
           <td class="paramname"><em>ctxt</em>, </td>
@@ -390,14 +390,20 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>copy_count</em>, </td>
+          <td class="paramtype"><a class="el" href="group__datatype.html#ga62059f680b22f2efe4a5d8cca26a7738">PolarisMemcpyKind</a>&#160;</td>
+          <td class="paramname"><em>kind</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>copy_length</em>, </td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -408,14 +414,8 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>dest_step</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>dest_padding</em>, </td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>stride_dest</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -426,14 +426,8 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>src_step</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>src_padding</em>&#160;</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>stride_src</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -443,22 +437,22 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Perform multiple FPGA memcpy in a specific pattern. </p>
-<p>Copy <code>copy_count</code> block of memorys, the length of each memory block is indicated by <code>copy_length</code>, the source and destination address of i-th copy (i = 0, 1, ..., <code>copy_count</code> -1) is <code>src[i * src_step + src_padding]</code> and <code>dest[i * dest_step + dest_padding]</code> seperately.</p>
+<p>Perform batched memcpy in a 2-D pattern. Often used to copy sub-matrices. </p>
+<p>Copy <code>m</code> rows of data, the size (in bytes) of each row is indicated by <code>n</code>, and the source and destination address of i-th copy (i = 0, 1, ..., <code>m</code> - 1) is <code>&amp;src[i * stride_src]</code> and <code>&amp;dest[i * stride_dest]</code> separately.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ctxt</td><td>pointer to <a class="el" href="struct_polaris_context.html" title="Context object. ">PolarisContext</a> </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">copy_count</td><td>number of memory blocks to be copied </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">copy_length</td><td>length of each memory copy </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">dest</td><td>destination FPGA address </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">dest_step</td><td>destination step </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">dest_padding</td><td>destination padding </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">src</td><td>source FPGA address </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">src_step</td><td>source step </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">src_padding</td><td>source padding</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">kind</td><td>direction of the transfer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">m</td><td>rows of matrix data (number of memory blocks to be copied) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>cols (in <code>bytes</code>) of matrix data (size of each memory copy) </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">dest</td><td>destination memory address </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">stride_dest</td><td>destination step </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">src</td><td>source memory address </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">stride_src</td><td>source step </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>Not supported by FPGA hardware yet.</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>Execution status, <a class="el" href="group__datatype.html#gga43a6c8a178e117ced2d5690274d08858a36ac641c4e79a322b5735a1aa7d3c0a6" title="Everything goes fine. ">POLARIS_OK</a> on success. </dd></dl>
 
 </div>

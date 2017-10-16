@@ -66,28 +66,12 @@ $(function() {
 <div class="contents">
 <div class="textblock">Here is a list of all documented file members with links to the documentation:</div>
 
-<h3><a id="index_m"></a>- m -</h3><ul>
-<li>MAX_DEVICE_COUNT
-: <a class="el" href="polaris_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba65a3b7ef8dfe5e8d64b1bc5a379a2d5d">polaris.h</a>
-</li>
-<li>MAX_FIRMWARE_NAME_LENGTH
-: <a class="el" href="polaris_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba32faf76fa74eb7edc07f434719c18152">polaris.h</a>
-</li>
-<li>MAX_VERSION_STRING_LENGTH
-: <a class="el" href="polaris_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba5a9dbd22e7a7bb77a44d38637e367178">polaris.h</a>
-</li>
-</ul>
-
-
 <h3><a id="index_p"></a>- p -</h3><ul>
-<li>polaris_activation()
-: <a class="el" href="group__compute.html#ga8f507194a83ae4123156968281b66cd4">polaris.h</a>
+<li>polaris_activation_2d()
+: <a class="el" href="group__compute.html#ga03490c3277ab8d8ee11457730eae9a54">polaris.h</a>
 </li>
 <li>POLARIS_ADD
 : <a class="el" href="group__datatype.html#gga4fd4a3ebdd79faf075a96203051f3aaaa61333a44fad62851aa844778f12bc6ca">polaris.h</a>
-</li>
-<li>polaris_batch_memcpy()
-: <a class="el" href="group__memory.html#ga941f0557f38ebb2b0b583f32c85c4a52">polaris.h</a>
 </li>
 <li>POLARIS_CONVSTREAM_CONVMTX1D
 : <a class="el" href="group__datatype.html#ggacaaa3e918a68f47412f7316a0deb27a7a5d82c4b2ca10ff1474627eb87c71bb28">polaris.h</a>
@@ -104,8 +88,8 @@ $(function() {
 <li>polaris_create_context()
 : <a class="el" href="group__context.html#gace2c83418f860b7bac62d3c3924382c6">polaris.h</a>
 </li>
-<li>polaris_deactivation()
-: <a class="el" href="group__compute.html#ga7aab8d6a4b0e38c14e6533118f4638b9">polaris.h</a>
+<li>polaris_deactivation_2d()
+: <a class="el" href="group__compute.html#gad6866b76fb4c1ef7b6cd7638f730f8c7">polaris.h</a>
 </li>
 <li>polaris_destroy_context()
 : <a class="el" href="group__context.html#ga4a1901427bd611138769cba7df5da14c">polaris.h</a>
@@ -116,8 +100,8 @@ $(function() {
 <li>POLARIS_DEVICE_TO_HOST
 : <a class="el" href="group__datatype.html#gga62059f680b22f2efe4a5d8cca26a7738a4d04e7a51d3be4e46a9ad29d9dfbdec9">polaris.h</a>
 </li>
-<li>polaris_eltwise()
-: <a class="el" href="group__compute.html#ga6deac46ed2aef1b80d2f3d96fc5eb8f9">polaris.h</a>
+<li>polaris_elementwise_2d()
+: <a class="el" href="group__compute.html#ga3f5064ec8bddc919230a8505ced42f54">polaris.h</a>
 </li>
 <li>POLARIS_ERR_INVALID
 : <a class="el" href="group__datatype.html#gga43a6c8a178e117ced2d5690274d08858a2e87eb325e0eb89f289987d4a874f4ff">polaris.h</a>
@@ -179,6 +163,9 @@ $(function() {
 <li>polaris_memcpy()
 : <a class="el" href="group__memory.html#gaa41026ebdeb0fd9d691203ea330a3c50">polaris.h</a>
 </li>
+<li>polaris_memcpy_2d()
+: <a class="el" href="group__memory.html#gaf1c3eb01d42d360e7083a98b2aa4b02a">polaris.h</a>
+</li>
 <li>polaris_memset()
 : <a class="el" href="group__memory.html#gabca228e59e4c5fa783d83edc06c87806">polaris.h</a>
 </li>
@@ -204,13 +191,16 @@ $(function() {
 : <a class="el" href="group__datatype.html#gga30b1dbc7c2fc9da350af147c81833028ada93d31e79cd28c5c06ccc3a5ee53e0b">polaris.h</a>
 </li>
 <li>polaris_read_register()
-: <a class="el" href="polaris_8h.html#a5368fecd27ed8485a6da055f50b3aba5">polaris.h</a>
+: <a class="el" href="polaris_8h.html#af4f25327c9d7e750ea7cf84511796c6e">polaris.h</a>
 </li>
 <li>POLARIS_RELU
 : <a class="el" href="group__datatype.html#ggabc94218c26be2f0866c73495d27c02c1adb919ed5c0ed062d29ab98e7f517f3df">polaris.h</a>
 </li>
 <li>POLARIS_SIGMOID
 : <a class="el" href="group__datatype.html#ggabc94218c26be2f0866c73495d27c02c1ab924df42dba0de33ca2ba649814d2658">polaris.h</a>
+</li>
+<li>POLARIS_SOFTSIGN
+: <a class="el" href="group__datatype.html#ggabc94218c26be2f0866c73495d27c02c1a4edebc71c96348bf36a62f5835aabdb6">polaris.h</a>
 </li>
 <li>POLARIS_TANH
 : <a class="el" href="group__datatype.html#ggabc94218c26be2f0866c73495d27c02c1a90eaaf42e771185db4d4e260cb1c0780">polaris.h</a>
@@ -219,10 +209,10 @@ $(function() {
 : <a class="el" href="group__datatype.html#gga9c7dff36f8ddd014648ea27766095824a4efd43d6d952f51d8b484bd352beda26">polaris.h</a>
 </li>
 <li>polaris_transpose()
-: <a class="el" href="group__compute.html#gad287fd8bf298cb14d0f165d938a35cb0">polaris.h</a>
+: <a class="el" href="group__compute.html#ga4ad60397f7345f2518cf52f87a599aa1">polaris.h</a>
 </li>
 <li>polaris_write_register()
-: <a class="el" href="polaris_8h.html#af9f795b7b458b246eefeb1e970ec19ae">polaris.h</a>
+: <a class="el" href="polaris_8h.html#a965c5e18d147017040390873acb3902f">polaris.h</a>
 </li>
 <li>PolarisActivationType
 : <a class="el" href="group__datatype.html#gabc94218c26be2f0866c73495d27c02c1">polaris.h</a>

@@ -65,22 +65,17 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">polaris.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>declaration device APIs  
-<a href="#details">More...</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_polaris_context.html">PolarisContext</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Context object.  <a href="struct_polaris_context.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
+<a name="details" id="details"></a><h2 class="groupheader">Introduction</h2>
+<div class="textblock"><p>A FPGA-accelerated library of primitives for deep neural networks. <br />
+ Provides highly tuned implementations of routines arising frequently in deep learning applications. </p>
+<dl class="section author"><dt>Authors</dt><dd><a href="#" onclick="location.href='mai'+'lto:'+'isa'+'@b'+'aid'+'u.'+'com'; return false;">isa@b<span style="display: none;">.nosp@m.</span>aidu<span style="display: none;">.nosp@m.</span>.com</a></dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>(C) 2017 Baidu, Inc </dd></dl>
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:gace2c83418f860b7bac62d3c3924382c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_polaris_context.html">PolarisContext</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__context.html#gace2c83418f860b7bac62d3c3924382c6">polaris_create_context</a> (int devid)</td></tr>
@@ -110,21 +105,21 @@ Functions</h2></td></tr>
 <tr class="memitem:gabca228e59e4c5fa783d83edc06c87806"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__datatype.html#ga43a6c8a178e117ced2d5690274d08858">PolarisStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__memory.html#gabca228e59e4c5fa783d83edc06c87806">polaris_memset</a> (<a class="el" href="struct_polaris_context.html">PolarisContext</a> *ctxt, void *ptr, size_t size)</td></tr>
 <tr class="memdesc:gabca228e59e4c5fa783d83edc06c87806"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill a range of FPGA memory with zero.  <a href="group__memory.html#gabca228e59e4c5fa783d83edc06c87806">More...</a><br /></td></tr>
 <tr class="separator:gabca228e59e4c5fa783d83edc06c87806"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8f507194a83ae4123156968281b66cd4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__datatype.html#ga43a6c8a178e117ced2d5690274d08858">PolarisStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__compute.html#ga8f507194a83ae4123156968281b66cd4">polaris_activation</a> (<a class="el" href="struct_polaris_context.html">PolarisContext</a> *ctxt, <a class="el" href="group__datatype.html#gabc94218c26be2f0866c73495d27c02c1">PolarisActivationType</a> type, size_t length, float alpha, const float *src, float beta, float *dest)</td></tr>
-<tr class="memdesc:ga8f507194a83ae4123156968281b66cd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate activation functions.  <a href="group__compute.html#ga8f507194a83ae4123156968281b66cd4">More...</a><br /></td></tr>
-<tr class="separator:ga8f507194a83ae4123156968281b66cd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7aab8d6a4b0e38c14e6533118f4638b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__datatype.html#ga43a6c8a178e117ced2d5690274d08858">PolarisStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__compute.html#ga7aab8d6a4b0e38c14e6533118f4638b9">polaris_deactivation</a> (<a class="el" href="struct_polaris_context.html">PolarisContext</a> *ctxt, <a class="el" href="group__datatype.html#gabc94218c26be2f0866c73495d27c02c1">PolarisActivationType</a> type, size_t length, float alpha, const float *src, const float *src_diff, const float *dest, float beta, float *dest_diff)</td></tr>
-<tr class="memdesc:ga7aab8d6a4b0e38c14e6533118f4638b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate derived activation functions.  <a href="group__compute.html#ga7aab8d6a4b0e38c14e6533118f4638b9">More...</a><br /></td></tr>
-<tr class="separator:ga7aab8d6a4b0e38c14e6533118f4638b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6deac46ed2aef1b80d2f3d96fc5eb8f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__datatype.html#ga43a6c8a178e117ced2d5690274d08858">PolarisStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__compute.html#ga6deac46ed2aef1b80d2f3d96fc5eb8f9">polaris_eltwise</a> (<a class="el" href="struct_polaris_context.html">PolarisContext</a> *ctxt, <a class="el" href="group__datatype.html#ga4fd4a3ebdd79faf075a96203051f3aaa">PolarisElementWiseType</a> type, size_t length, float alpha0, const float *a, float alpha1, const float *b, float beta, float *c)</td></tr>
-<tr class="memdesc:ga6deac46ed2aef1b80d2f3d96fc5eb8f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Element wise functions.  <a href="group__compute.html#ga6deac46ed2aef1b80d2f3d96fc5eb8f9">More...</a><br /></td></tr>
-<tr class="separator:ga6deac46ed2aef1b80d2f3d96fc5eb8f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad287fd8bf298cb14d0f165d938a35cb0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__datatype.html#ga43a6c8a178e117ced2d5690274d08858">PolarisStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__compute.html#gad287fd8bf298cb14d0f165d938a35cb0">polaris_transpose</a> (<a class="el" href="struct_polaris_context.html">PolarisContext</a> *ctxt, int m, int n, const void *src, void *dest)</td></tr>
-<tr class="memdesc:gad287fd8bf298cb14d0f165d938a35cb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform matrix transpose on FPGA.  <a href="group__compute.html#gad287fd8bf298cb14d0f165d938a35cb0">More...</a><br /></td></tr>
-<tr class="separator:gad287fd8bf298cb14d0f165d938a35cb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga941f0557f38ebb2b0b583f32c85c4a52"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__datatype.html#ga43a6c8a178e117ced2d5690274d08858">PolarisStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__memory.html#ga941f0557f38ebb2b0b583f32c85c4a52">polaris_batch_memcpy</a> (<a class="el" href="struct_polaris_context.html">PolarisContext</a> *ctxt, int copy_count, size_t copy_length, void *dest, size_t dest_step, size_t dest_padding, const void *src, size_t src_step, size_t src_padding)</td></tr>
-<tr class="memdesc:ga941f0557f38ebb2b0b583f32c85c4a52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform multiple FPGA memcpy in a specific pattern.  <a href="group__memory.html#ga941f0557f38ebb2b0b583f32c85c4a52">More...</a><br /></td></tr>
-<tr class="separator:ga941f0557f38ebb2b0b583f32c85c4a52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga03490c3277ab8d8ee11457730eae9a54"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__datatype.html#ga43a6c8a178e117ced2d5690274d08858">PolarisStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__compute.html#ga03490c3277ab8d8ee11457730eae9a54">polaris_activation_2d</a> (<a class="el" href="struct_polaris_context.html">PolarisContext</a> *ctxt, <a class="el" href="group__datatype.html#gabc94218c26be2f0866c73495d27c02c1">PolarisActivationType</a> type, int m, int n, float alpha, const void *x, <a class="el" href="group__datatype.html#ga07d185c916380435006dbfa5140b58f0">PolarisDataType</a> type_x, int stride_x, float beta, void *y, <a class="el" href="group__datatype.html#ga07d185c916380435006dbfa5140b58f0">PolarisDataType</a> type_y, int stride_y)</td></tr>
+<tr class="memdesc:ga03490c3277ab8d8ee11457730eae9a54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute activation functions.  <a href="group__compute.html#ga03490c3277ab8d8ee11457730eae9a54">More...</a><br /></td></tr>
+<tr class="separator:ga03490c3277ab8d8ee11457730eae9a54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad6866b76fb4c1ef7b6cd7638f730f8c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__datatype.html#ga43a6c8a178e117ced2d5690274d08858">PolarisStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__compute.html#gad6866b76fb4c1ef7b6cd7638f730f8c7">polaris_deactivation_2d</a> (<a class="el" href="struct_polaris_context.html">PolarisContext</a> *ctxt, <a class="el" href="group__datatype.html#gabc94218c26be2f0866c73495d27c02c1">PolarisActivationType</a> type, int m, int n, float alpha, const void *y, <a class="el" href="group__datatype.html#ga07d185c916380435006dbfa5140b58f0">PolarisDataType</a> type_y, int stride_y, const void *dy, <a class="el" href="group__datatype.html#ga07d185c916380435006dbfa5140b58f0">PolarisDataType</a> type_dy, int stride_dy, const void *x, <a class="el" href="group__datatype.html#ga07d185c916380435006dbfa5140b58f0">PolarisDataType</a> type_x, int stride_x, float beta, void *dx, <a class="el" href="group__datatype.html#ga07d185c916380435006dbfa5140b58f0">PolarisDataType</a> type_dx, int stride_dx)</td></tr>
+<tr class="memdesc:gad6866b76fb4c1ef7b6cd7638f730f8c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute derived activation functions.  <a href="group__compute.html#gad6866b76fb4c1ef7b6cd7638f730f8c7">More...</a><br /></td></tr>
+<tr class="separator:gad6866b76fb4c1ef7b6cd7638f730f8c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3f5064ec8bddc919230a8505ced42f54"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__datatype.html#ga43a6c8a178e117ced2d5690274d08858">PolarisStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__compute.html#ga3f5064ec8bddc919230a8505ced42f54">polaris_elementwise_2d</a> (<a class="el" href="struct_polaris_context.html">PolarisContext</a> *ctxt, <a class="el" href="group__datatype.html#ga4fd4a3ebdd79faf075a96203051f3aaa">PolarisElementWiseType</a> type, int m, int n, float alpha0, const void *x0, <a class="el" href="group__datatype.html#ga07d185c916380435006dbfa5140b58f0">PolarisDataType</a> type_x0, int stride_x0, float alpha1, const void *x1, <a class="el" href="group__datatype.html#ga07d185c916380435006dbfa5140b58f0">PolarisDataType</a> type_x1, int stride_x1, float beta, void *y, <a class="el" href="group__datatype.html#ga07d185c916380435006dbfa5140b58f0">PolarisDataType</a> type_y, int stride_y)</td></tr>
+<tr class="memdesc:ga3f5064ec8bddc919230a8505ced42f54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Element wise functions.  <a href="group__compute.html#ga3f5064ec8bddc919230a8505ced42f54">More...</a><br /></td></tr>
+<tr class="separator:ga3f5064ec8bddc919230a8505ced42f54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4ad60397f7345f2518cf52f87a599aa1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__datatype.html#ga43a6c8a178e117ced2d5690274d08858">PolarisStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__compute.html#ga4ad60397f7345f2518cf52f87a599aa1">polaris_transpose</a> (<a class="el" href="struct_polaris_context.html">PolarisContext</a> *ctxt, int m, int n, const void *x, <a class="el" href="group__datatype.html#ga07d185c916380435006dbfa5140b58f0">PolarisDataType</a> type_x, int stride_x, void *y, <a class="el" href="group__datatype.html#ga07d185c916380435006dbfa5140b58f0">PolarisDataType</a> type_y, int stride_y)</td></tr>
+<tr class="memdesc:ga4ad60397f7345f2518cf52f87a599aa1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform matrix transpose on FPGA.  <a href="group__compute.html#ga4ad60397f7345f2518cf52f87a599aa1">More...</a><br /></td></tr>
+<tr class="separator:ga4ad60397f7345f2518cf52f87a599aa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf1c3eb01d42d360e7083a98b2aa4b02a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__datatype.html#ga43a6c8a178e117ced2d5690274d08858">PolarisStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__memory.html#gaf1c3eb01d42d360e7083a98b2aa4b02a">polaris_memcpy_2d</a> (<a class="el" href="struct_polaris_context.html">PolarisContext</a> *ctxt, <a class="el" href="group__datatype.html#ga62059f680b22f2efe4a5d8cca26a7738">PolarisMemcpyKind</a> kind, int m, int n, void *dest, int stride_dest, const void *src, int stride_src)</td></tr>
+<tr class="memdesc:gaf1c3eb01d42d360e7083a98b2aa4b02a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform batched memcpy in a 2-D pattern. Often used to copy sub-matrices.  <a href="group__memory.html#gaf1c3eb01d42d360e7083a98b2aa4b02a">More...</a><br /></td></tr>
+<tr class="separator:gaf1c3eb01d42d360e7083a98b2aa4b02a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac3fb3fbd848210eff75f200bdf87b882"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__query.html#gac3fb3fbd848210eff75f200bdf87b882">polaris_get_devices</a> (int *devs, int devs_len)</td></tr>
 <tr class="memdesc:gac3fb3fbd848210eff75f200bdf87b882"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of all the FPGA devices.  <a href="group__query.html#gac3fb3fbd848210eff75f200bdf87b882">More...</a><br /></td></tr>
 <tr class="separator:gac3fb3fbd848210eff75f200bdf87b882"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -134,44 +129,16 @@ Functions</h2></td></tr>
 <tr class="memitem:gac714bca03dde561ee992bf95b3faa36f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__query.html#gac714bca03dde561ee992bf95b3faa36f">polaris_get_driver_version</a> (char *ver, int ver_len)</td></tr>
 <tr class="memdesc:gac714bca03dde561ee992bf95b3faa36f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get version string of the driver.  <a href="group__query.html#gac714bca03dde561ee992bf95b3faa36f">More...</a><br /></td></tr>
 <tr class="separator:gac714bca03dde561ee992bf95b3faa36f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5368fecd27ed8485a6da055f50b3aba5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__datatype.html#ga43a6c8a178e117ced2d5690274d08858">PolarisStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="polaris_8h.html#a5368fecd27ed8485a6da055f50b3aba5">polaris_read_register</a> (<a class="el" href="struct_polaris_context.html">PolarisContext</a> *ctxt, uint64_t addr, uint64_t *value)</td></tr>
-<tr class="memdesc:a5368fecd27ed8485a6da055f50b3aba5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a FPGA register.  <a href="#a5368fecd27ed8485a6da055f50b3aba5">More...</a><br /></td></tr>
-<tr class="separator:a5368fecd27ed8485a6da055f50b3aba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9f795b7b458b246eefeb1e970ec19ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__datatype.html#ga43a6c8a178e117ced2d5690274d08858">PolarisStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="polaris_8h.html#af9f795b7b458b246eefeb1e970ec19ae">polaris_write_register</a> (<a class="el" href="struct_polaris_context.html">PolarisContext</a> *ctxt, uint64_t addr, uint64_t value)</td></tr>
-<tr class="memdesc:af9f795b7b458b246eefeb1e970ec19ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a FPGA register.  <a href="#af9f795b7b458b246eefeb1e970ec19ae">More...</a><br /></td></tr>
-<tr class="separator:af9f795b7b458b246eefeb1e970ec19ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4f25327c9d7e750ea7cf84511796c6e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__datatype.html#ga43a6c8a178e117ced2d5690274d08858">PolarisStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="polaris_8h.html#af4f25327c9d7e750ea7cf84511796c6e">polaris_read_register</a> (<a class="el" href="struct_polaris_context.html">PolarisContext</a> *ctxt, uint64_t addr, uint64_t *value, int bar)</td></tr>
+<tr class="memdesc:af4f25327c9d7e750ea7cf84511796c6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a FPGA register.  <a href="#af4f25327c9d7e750ea7cf84511796c6e">More...</a><br /></td></tr>
+<tr class="separator:af4f25327c9d7e750ea7cf84511796c6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a965c5e18d147017040390873acb3902f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__datatype.html#ga43a6c8a178e117ced2d5690274d08858">PolarisStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="polaris_8h.html#a965c5e18d147017040390873acb3902f">polaris_write_register</a> (<a class="el" href="struct_polaris_context.html">PolarisContext</a> *ctxt, uint64_t addr, uint64_t value, int bar)</td></tr>
+<tr class="memdesc:a965c5e18d147017040390873acb3902f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a FPGA register.  <a href="#a965c5e18d147017040390873acb3902f">More...</a><br /></td></tr>
+<tr class="separator:a965c5e18d147017040390873acb3902f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>declaration device APIs </p>
-<dl class="section date"><dt>Date</dt><dd>2017-08-07</dd></dl>
-<dl class="section author"><dt>Authors</dt><dd><a href="#" onclick="location.href='mai'+'lto:'+'han'+'ji'+'nch'+'en'+'@ba'+'id'+'u.c'+'om'; return false;">hanji<span style="display: none;">.nosp@m.</span>nche<span style="display: none;">.nosp@m.</span>n@bai<span style="display: none;">.nosp@m.</span>du.c<span style="display: none;">.nosp@m.</span>om</a></dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>(C) 2017 Baidu, Inc </dd></dl>
-</div><h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="a06fc87d81c62e9abb8790b6e5713c55b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a06fc87d81c62e9abb8790b6e5713c55b">&#9670;&nbsp;</a></span>anonymous enum</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">anonymous enum</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba65a3b7ef8dfe5e8d64b1bc5a379a2d5d"></a>MAX_DEVICE_COUNT&#160;</td><td class="fielddoc"><p>max device number </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba5a9dbd22e7a7bb77a44d38637e367178"></a>MAX_VERSION_STRING_LENGTH&#160;</td><td class="fielddoc"><p>max length of version string </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba32faf76fa74eb7edc07f434719c18152"></a>MAX_FIRMWARE_NAME_LENGTH&#160;</td><td class="fielddoc"><p>max length of firmware-name string </p>
-</td></tr>
-</table>
-
-</div>
-</div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a5368fecd27ed8485a6da055f50b3aba5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5368fecd27ed8485a6da055f50b3aba5">&#9670;&nbsp;</a></span>polaris_read_register()</h2>
+<a id="af4f25327c9d7e750ea7cf84511796c6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4f25327c9d7e750ea7cf84511796c6e">&#9670;&nbsp;</a></span>polaris_read_register()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -192,7 +159,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint64_t *&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bar</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -208,7 +181,8 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ctxt</td><td>pointer to context </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>register address </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">value</td><td>where to store the read</td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">value</td><td>where to store the value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bar</td><td>bar space id of the register</td></tr>
   </table>
   </dd>
 </dl>
@@ -216,8 +190,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="af9f795b7b458b246eefeb1e970ec19ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af9f795b7b458b246eefeb1e970ec19ae">&#9670;&nbsp;</a></span>polaris_write_register()</h2>
+<a id="a965c5e18d147017040390873acb3902f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a965c5e18d147017040390873acb3902f">&#9670;&nbsp;</a></span>polaris_write_register()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -238,7 +212,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint64_t&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bar</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -254,7 +234,8 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ctxt</td><td>pointer to context </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>register address </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>the value to write</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>the value to write </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bar</td><td>bar space id of the register</td></tr>
   </table>
   </dd>
 </dl>
